@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0px;
+}
+.container {
+    display: none;
+}
+.image {
+     background-color: cyan;
+}
+.one {
+    height: 2000px;
+    border: 5px solid #f0f;
+}
+.two {
+    height: 500px;
+    border: 5px solid #000;
+}
+
+.container {
+    height: 300px;
+    width: 200px;
+    background-color: ghostwhite;
+    border: 1px solid black;
+    overflow-y: scroll;
+    display: none;
+    flex-direction: column;
+}
+
+.content {
+    color: green;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.target-btn {
+    padding: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    color: green;
+}
+
+.target {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 20px;
+    cursor: pointer;
+    display: none;
+}
+.flex {
+    position: relative;
+}
+.flex ul {
+    display: flex;
+    border: 1px solid #999;
+}
+
+.flex ul,
+.flex li {
+    list-style: none;
+    text-align: center;
+}
+
+.flex li {
+    flex: 1 auto;
+    white-space: nowrap;
+    padding: 5px 20px;
+    border-right: 1px solid #999;
+    background:#dfdfdf;
+    font-size: 0.75em;
+    cursor: pointer;
+}
+.flex li:hover {
+    background: #000;
+    color: #fff;
+}
+.smartmenu {
+    width: 250px;
+    height: 200px;
+    overflow: auto;
+    position:absolute;
+    right: 0;
+    display: none;
+}
+.smartmenu li {
+    text-align: left;
+}
+.flex ul li:last-child:after {
+    content: "+";
+    position: absolute;
+    right: 10px;
+    font-weight: bold;
+    color: #000;
+}
+.flex ul li:last-child:hover:after {
+    color: #fff;
+}
+.u-block {
+    display: block;
+}
+#text strong {
+    background:yellow;
+}
+.hmenu {
+    position: relative;
+}
+.hmenu ul {
+    display: flex;
+    list-style: none;
+}
+.hmenu li {
+    flex: 1 auto;
+    background: #000;
+    color: #fff;
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+.hmenuscroll {
+    overflow: hidden;
+}
+.l, .r {
+    position: absolute;
+    width: 22px;
+    height: 38px;
+    line-height:38px;
+    transform: translate(0%, 0%);
+    cursor: pointer;
+    text-align: center;
+    background:#000;
+}
+.r {
+    right: 0;
+}
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.arrow.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      display:none;
+}
+
+.arrow.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+      display:none;
+}
+.l:hover .left,.r:hover .right {
+    display:inline-block;
+}

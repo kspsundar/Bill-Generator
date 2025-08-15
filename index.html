@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Development Exercise</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>        
+        <!-- <button class="contact">Contact Us</button>  
+        <div class="ajax"></div> -->
+        <!-- <div><span class="loader">Loading...</span><img class="image" src="" /></div> -->
+        <div class="flex">
+            <ul>
+                
+            </ul>
+            <div class="smartmenu"></div>
+        </div>
+        <div id="timer"></div>        
+        <div class="container">
+            <div class="content">
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <div class="target"></div>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+                <p>GeeksforGeeks</p>
+            </div>
+        </div>
+        <button class="btn">
+              Check If Target Is Visible
+          </button>
+
+          <input type="text" id="input" />
+        <div id="text">            
+        </div>
+        <div id="target"></div>
+
+          <script src="jquery.js"></script>
+        <script type="text/javascript" src="exercise.js"></script>
+        <script type="text/javascript">
+            var n = [1,2,3];
+           // console.log(n.reduce((n,o) => n + o));
+            function setHeight() {
+                var image = document.querySelector(".image");
+                image.style.height="";
+                image.style.width="";
+                image.style.height = window.innerHeight +"px";
+                image.style.width = window.innerWidth +"px";
+            }
+            //setHeight();
+            // window.addEventListener("resize", function () {
+            //     setHeight();
+            // });
+            const target = document.querySelector(".target");
+const container = document.querySelector(".container");
+const btn = document.querySelector(".btn");
+let isVisible = null;
+
+const callBack = (entries) => {
+       //console.log(entries[0]);
+      isVisible = entries[0].isIntersecting;
+};
+
+const options = {
+      root: container,
+      threshold: 1.0
+};
+
+const observer = new IntersectionObserver(callBack, options);
+
+observer.observe(target);
+
+btn.addEventListener("click", () => {
+      if (isVisible) {
+        alert("Target Element is visible");
+  } else {
+        alert("Target Element is not visible");
+  }
+});
+
+function smartMenu() {
+    var j = 0;
+        var countries=
+        [ 
+  {name: 'Afghanistan', code: 'AF'}, 
+  {name: 'Åland Islands', code: 'AX'}, 
+  {name: 'Albania', code: 'AL'}, 
+  {name: 'Algeria', code: 'DZ'}, 
+  {name: 'American Samoa', code: 'AS'}, 
+  {name: 'AndorrA', code: 'AD'}, 
+  {name: 'Angola', code: 'AO'}, 
+  {name: 'Anguilla', code: 'AI'}, 
+  {name: 'Antarctica', code: 'AQ'}, 
+  {name: 'Antigua and Barbuda', code: 'AG'}, 
+  {name: 'Argentina', code: 'AR'}, 
+  {name: 'Armenia', code: 'AM'}, 
+  {name: 'Aruba', code: 'AW'}, 
+  {name: 'Australia', code: 'AU'}, 
+  {name: 'Austria', code: 'AT'}, 
+  {name: 'Azerbaijan', code: 'AZ'}, 
+  {name: 'Bahamas', code: 'BS'}, 
+  {name: 'Bahrain', code: 'BH'}, 
+  {name: 'Bangladesh', code: 'BD'}, 
+  {name: 'Barbados', code: 'BB'}, 
+  {name: 'Belarus', code: 'BY'}, 
+  {name: 'Belgium', code: 'BE'}, 
+  {name: 'Belize', code: 'BZ'}, 
+  {name: 'Benin', code: 'BJ'}, 
+  {name: 'Bermuda', code: 'BM'}, 
+  {name: 'Bhutan', code: 'BT'}, 
+  {name: 'Bolivia', code: 'BO'}, 
+  {name: 'Bosnia and Herzegovina', code: 'BA'}, 
+  {name: 'Botswana', code: 'BW'}, 
+  {name: 'Bouvet Island', code: 'BV'}, 
+  {name: 'Brazil', code: 'BR'}, 
+  {name: 'British Indian Ocean Territory', code: 'IO'}, 
+  {name: 'Brunei Darussalam', code: 'BN'}, 
+  {name: 'Bulgaria', code: 'BG'}, 
+  {name: 'Burkina Faso', code: 'BF'}, 
+  {name: 'Burundi', code: 'BI'}, 
+  {name: 'Cambodia', code: 'KH'}, 
+  {name: 'Cameroon', code: 'CM'}, 
+  {name: 'Canada', code: 'CA'}, 
+  {name: 'Cape Verde', code: 'CV'}, 
+  {name: 'Cayman Islands', code: 'KY'}, 
+  {name: 'Central African Republic', code: 'CF'}, 
+  {name: 'Chad', code: 'TD'}, 
+  {name: 'Chile', code: 'CL'}, 
+  {name: 'China', code: 'CN'}, 
+  {name: 'Christmas Island', code: 'CX'}, 
+  {name: 'Cocos (Keeling) Islands', code: 'CC'}, 
+  {name: 'Colombia', code: 'CO'}, 
+  {name: 'Comoros', code: 'KM'}
+];
+var str="";
+        $(countries).each((i,e) => {
+            str+="<li>"+e.name+"</li>";
+        });
+        $(".flex ul").html("");
+        $(".flex ul").append(str);
+        var submenu=[], mainmenu=[];
+        $(".flex li").each((i,e) => {
+            if(i < countries.length) {
+                j+=$(e).outerWidth();
+                if(j>$(e).parent().outerWidth()) {                
+                    submenu.push("<li>"+$(e).text()+"</li>");
+                }
+                else {
+                    mainmenu.push("<li>"+$(e).text()+"</li>");
+                }
+            }
+        });
+        var mainFilter=mainmenu.filter((e, i) => mainmenu.indexOf(e)===i);
+        var subFilter=submenu.filter((e, i) => submenu.indexOf(e)===i);
+        $(".flex ul").html("");
+        $(".flex ul").append(mainFilter.join(""));
+        $(".smartmenu").html("");
+        $(".smartmenu").append(subFilter.join(""));
+        $(".flex ul li:last").on("click", function () {
+            $(this).parent().next().toggleClass("u-block");
+        });
+}        
+smartMenu();
+//() => {//$.throttle(250, smartMenu)
+$(window).resize( () => {
+smartMenu();
+});
+// function getData(page) {
+//     $.ajax({
+//         url:page?page:'index.html'
+//     })
+//     .done(function(data) {
+//         $(".ajax").html(data);
+//     })
+// }
+// $(".contact").click(function() {
+//     getData();
+// });
+// var page=window.location.href.match(/(\w+.\w+)$/)[0];
+//getData(page);
+var obj={
+        "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at accumsan eros. Vestibulum vitae neque id sapien dapibus placerat. Mauris ultricies sed magna eu hendrerit. Etiam posuere tempus tellus, ut dictum arcu tempus vitae. Ut eget metus mauris. Mauris finibus lacus eget finibus feugiat. Mauris vel lacus lobortis, malesuada odio interdum"
+    }
+    $("#text").html(obj.text);
+$("#input").on("keyup",function() {    
+    var e = $(this).val();
+    var orig = JSON.parse(JSON.stringify(obj));
+    var ch = $(this).next().html();
+    let regex = new RegExp(e, 'g');
+    if(e.length===0) {
+        ch=ch.replace(/(<strong>).<\/strong>/g,k => k.replace(/<.*?>/gi,""));
+        $("#text").html("").html(ch);
+    }
+    else {
+        if(/<strong>/g.test(ch)) {
+            var actual=orig.text.replace(regex,k => k.replace(k,"<strong>"+k+"</strong>"));
+            $("#text").html("").html(actual);
+        }
+        else {
+            ch=ch.replace(regex,k => k.replace(k,"<strong>"+k+"</strong>")); 
+            $("#text").html("").html(ch);  
+        }
+    }
+})
+
+        </script>
+    </body>
+</html>
